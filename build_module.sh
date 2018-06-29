@@ -315,11 +315,8 @@ fi
 echo "$ME: INFO: Downloading NGINX packaging tool"
 cd $BUILD_DIR
 if [ "$BUILD_PLATFORM" = "OSS" ]; then
-	if [ "$OSS_VER" != "" ]; then
-		MERCURIAL_TAG="-r $OSS_VER-1"
-	fi
-	hg clone $MERCURIAL_TAG http://hg.nginx.org/pkg-oss
-	cd pkg-oss/$PACKAGING_DIR
+	git clone https://github.com/tmagnien/splitbox-pkg-oss
+	cd splitbox-pkg-oss/$PACKAGING_DIR
 else
 	wget -O - http://hg.nginx.org/pkg-oss/archive/target-plus-r$PLUS_REL.tar.gz  | tar xfz -
 	cd pkg-oss-target-plus-r$PLUS_REL/$PACKAGING_DIR
