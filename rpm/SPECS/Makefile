@@ -254,8 +254,6 @@ BASE_CONFIGURE_ARGS=\
 	--user=%{nginx_user} \
 	--group=%{nginx_group} \
 	--with-compat \
-	--with-file-aio \
-	--with-threads \
 	--with-http_addition_module \
 	--with-http_auth_request_module \
 	--with-http_dav_module \
