@@ -387,7 +387,7 @@ echo "$ME: INFO: Building"
 if [ -d $PACKAGING_ROOT -a "$SAY_YES" = "-y" ]; then
         rm -fr $PACKAGING_ROOT
 fi
-BASE_VERSION=$VERSION make prepare-build-env
+VERSION=$VERSION make prepare-build-env
 if [ $? -ne 0 ]; then
 	echo "$ME: ERROR: Unable to prepare build environment - quitting"
 	exit 1
