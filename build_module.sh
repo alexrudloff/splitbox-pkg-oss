@@ -402,7 +402,7 @@ fi
 if [ "$BUILD_PLATFORM" = "Plus" ]; then
 	MODULE_TARGET=plus make module-$MODULE_NAME
 else
-	VERSION=$VERSION make module-$MODULE_NAME
+	SPLITBOX_CONFIGURE_ARGS=$SPLITBOX_CONFIGURE_ARGS VERSION=$VERSION make module-$MODULE_NAME
 fi
 if [ $? -ne 0 ]; then
 	echo "$ME: ERROR: Build failed"
